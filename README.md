@@ -14,6 +14,8 @@ This project now supports both iOS and Android using the same JS calls.
 ### Example
 Kirkness added a super simple example app to /examples, copy and paste to your index.ios.js.
 ``` js
+import SocketIO from 'react-native-socketio';
+
 /**
  * Pass in an optional config obj, this can include most of the
  * standard props supported by the swift library
@@ -146,12 +148,12 @@ $ npm install react-native-socketio
     }
     ```
 
-3. Register module (in MainActivity.java)
+3. Register module (in MainApplication.java)
 
     ```
     import com.gcrabtree.rctsocketio.SocketIoPackage;  // <--- import
 
-    public class MainActivity extends ReactActivity {
+    public class MainApplication extends Application implements ReactApplication {
       ......
 
       @Override
